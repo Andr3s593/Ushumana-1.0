@@ -1,0 +1,38 @@
+.login{
+    border-style: solid;    
+    border-color: #013c5c;
+    background: #003049;
+    color: white;
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+}
+#image-size{
+    position: relative;
+    border-radius: 50%;
+    width: 150px;
+    height: 110px;
+    background: #EAE2B7;
+}
+input{
+    width: 90%;
+    border-radius: 10px;
+}
+a{
+    color: white;    
+}
+a:hover{
+    color: #D62828;
+    transition: 0.5s;    
+}
+@media screen and (max-width: 1000px) {
+    .login{
+        border-style: solid;    
+        border-color: #013c5c;
+        background: #003049;
+        color: white;
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+    }
+}

@@ -1,18 +1,18 @@
 import { StaticModule } from './../static/static.module';
 import { RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    HomeComponent,
-    DashboardComponent
+    LoginComponent,
+    RegisterComponent
   ],
   exports:[
-    HomeComponent,
-    DashboardComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
@@ -20,4 +20,4 @@ import { CommonModule } from '@angular/common';
     StaticModule
   ]
 })
-export class PagesModule { }
+export class AuthModule { }
