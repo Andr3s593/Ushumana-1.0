@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container d-flex justify-content-center">
+    <div class="login">
+        <div class="container text-center">
+            <br>
+            <img id="image-size" class="img-fluid" src="../../../assets/logos/logo1.png" alt="">
+            <br>
+            <br>
+            <form action="login">
+                <label for="email">
+                    <h5>Email</h5>
+                </label>
+                <br>
+                <input type="email" id="email" required>
+                <br>
+                <br>
+                <label for="password">
+                    <h5>Contraseña</h5>
+                </label>
+                <br>
+                <input minlength="8" type="password" id="password" required>
+                <br>
+                <br>
+                <label for="password-repeat">
+                    <h5>Repetir Contraseña</h5>
+                </label>
+                <br>
+                <input minlength="8" type="password" id="password-repeat" required>
+                <br>
+                <br>
+                <label for="edad"><h5>Fecha de Nacimiento</h5></label>
+                <br>
+                <input type="date" required>
+                <br>                            
+                <br>                
+                <button type="submmit" class="btn btn-danger">Crear Cuenta</button>
+            </form>
+            <br>
+        </div>        
+    </div>
+</div>
+<br>
+<app-footer></app-footer>
