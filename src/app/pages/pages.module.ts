@@ -4,11 +4,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    RestaurantComponent
   ],
   exports:[
     HomeComponent,
