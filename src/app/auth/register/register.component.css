@@ -7,6 +7,13 @@
     height: 40%;
     border-radius: 10px;
 }
+body{
+    background-image: url(../../../assets/login/ushiman4.jpg);
+    background-size: cover;
+    background-position: center;       
+    position: relative;    
+    bottom: 9px;    
+}
 #image-size{
     position: relative;
     border-radius: 20%;
