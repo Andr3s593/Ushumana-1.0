@@ -1,0 +1,78 @@
+<body>
+  <form action="/home/dashboard">
+    <div id="espacio" class="container-fluid text-center p-5">
+      <div class="row ">
+        <h1 class="text-center">Reserva en linea</h1>
+        <h2 class="text-center">Datos Personales</h2>        
+        
+        <div class="col-lg-6 col-md-6 p-2">
+          <label for="nombre">
+            <h5>Nombre:</h5>
+            <input required id="nombre" type="text">
+          </label>
+          <br>
+          <label for="correo">
+            <h5>Correo Electronico:</h5>
+            <input required id="correo" type="email">
+          </label>
+        </div>
+        <div class="col-lg-6 col-md-6 p-2">
+          <label for="apellido">
+            <h5>Apellidos:</h5>
+            <input required id="apellido" type="text">
+          </label>
+          <br>
+          <label for="numerotelf">
+            <h5>Numero de Telefono:</h5>
+            <input required id="numerotelf" minlength="9" type="text">
+          </label>
+        </div>        
+        
+          <h2 class="text-center">Datos de la Reserva</h2>        
+        
+        <div class="col-lg-6 col-md-6 p-2">
+          <label for="adultos">
+            <h5>Numero de adultos:</h5>
+            <input required id="adultos" type="number">
+          </label>
+          <br>
+          <label for="fecha">
+            <h5>Fecha de la reserva:</h5>
+            <input required id="fecha" type="date">
+          </label>
+          <br>
+          <label for="mascotas">
+            <h5>Llevara Mascotas:</h5>
+            <div class="form-check">
+              <input required type="radio" class="form-check-input required" id="mascotas" value="option2">
+              <label class="form-check-label">Si</label>
+            </div>
+            <div class="form-check">
+              <input required type="radio" class="form-check-input required" id="mascotas" value="option2">
+              <label class="form-check-label">No</label>
+            </div>
+          </label>
+        </div>
+        <div class="col-lg-6 col-md-6 p-2">
+          <label for="ninos">
+            <h5>Numero de Niños:</h5>
+            <input required id="ninos" type="number">
+          </label>
+          <br>
+          <label for="decripcion">
+            <p>¿Algo más que debamos saber?</p>
+            <textarea class="gui-textarea" id="comment" placeholder=></textarea>
+            <br>
+            <span class="input required-hint">
+              <strong>Por favor:</strong> Sea lo más descriptivo posible.
+            </span>
+          </label>
+        </div>
+                       
+        <div class="container text-center">
+          <button id="size-button" class="btn btn-danger m-4">Reservar</button>
+        </div>        
+      </div>
+    </div>
+  </form>  
+</body>

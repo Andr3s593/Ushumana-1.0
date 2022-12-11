@@ -1,3 +1,4 @@
+import { ReservasComponent } from './reservas/reservas.component';
 import { TicketComponent } from './ticket/ticket.component';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -10,6 +11,7 @@ const routes:Routes = [
   component:HomeComponent,
   children:[
     {path:'dashboard', component:DashboardComponent},
+    {path:'reservas', component:ReservasComponent},
     {path:'tickets', component:TicketComponent},
   ]}
 ]
