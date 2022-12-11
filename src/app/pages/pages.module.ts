@@ -11,16 +11,14 @@ import { ReservasComponent } from './reservas/reservas.component';
   declarations: [
     HomeComponent,
     DashboardComponent,
-<<<<<<< HEAD
+    TicketComponent,
     ReservasComponent
-=======
-    TicketComponent
->>>>>>> 5c863e0f8e0799ca4b9534c866794e307551215f
   ],
   exports:[
     HomeComponent,
     DashboardComponent,
-    TicketComponent
+    TicketComponent,
+    ReservasComponent
   ],
   imports: [
     CommonModule,
