@@ -12,13 +12,15 @@ import { ReservasComponent } from './reservas/reservas.component';
     HomeComponent,
     DashboardComponent,
     TicketComponent,
-    ReservasComponent
+    ReservasComponent,
+    TicketComponent
   ],
   exports:[
     HomeComponent,
     DashboardComponent,
     TicketComponent,
-    ReservasComponent
+    ReservasComponent,
+    TicketComponent
   ],
   imports: [
     CommonModule,
