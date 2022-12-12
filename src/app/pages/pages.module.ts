@@ -5,12 +5,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ReservasComponent } from './reservas/reservas.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     DashboardComponent,
+    RestaurantComponent,
     TicketComponent,
     ReservasComponent,
     TicketComponent
