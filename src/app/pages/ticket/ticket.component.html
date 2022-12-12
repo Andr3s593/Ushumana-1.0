@@ -1,0 +1,68 @@
+<header id="header">
+    <h1>Compra Tus Entradas</h1> 
+    <img class="boleto" src="../../../assets/boletos/boleto.png" alt="boleto">
+  </header>
+  <div id="contenedor" class="contenedor">
+    <div>
+        <img src="../../../assets/boletos/paquete1.jpg" alt="paquete 1">
+        <div class="informacion">
+            <p>Paquete 1</p>
+            <p class="precio">$199<span>.99</span></p>
+            <button>Comprar</button>
+        </div>
+    </div>
+    <div>
+        <img src="../../../assets/boletos/paquete2.jpg" alt="paquete 2">
+        <div class="informacion">
+            <p>Paquete 2</p>                   
+            <p class="precio">$299<span>.99</span></p>
+            <button>Comprar</button>
+        </div>
+    </div>
+    <div>
+        <img src="../../../assets/boletos/paquete3.jpg" alt="paquete 3">
+        <div class="informacion">
+            <p>Paquete 3</p>                   
+            <p class="precio">$399<span>.99</span></p>
+            <button>Comprar</button>
+        </div>
+    </div>
+    <div>
+        <img src="../../../assets/boletos/paquete4.jpg" alt="paquete 4">
+        <div class="informacion">
+            <p>Paquete 4</p>                   
+            <p class="precio">$499<span>.99</span></p>
+            <button>Comprar</button>
+        </div>
+    </div>
+    <div>
+        <img src="../../../assets/boletos/paquete5.jpg" alt="paquete 5">
+        <div class="informacion">
+            <p>Paquete 5</p>                   
+            <p class="precio">$599<span>.99</span></p>
+            <button>Comprar</button>
+        </div>
+    </div>
+    <div>
+        <img src="../../../assets/boletos/paquete6.jpg" alt="paquete 6">
+        <div class="informacion">
+            <p>Paquete 6</p>                   
+            <p class="precio">$699<span>.99</span></p>
+            <button>Comprar</button>
+        </div>
+    </div>
+  </div>
+  
+  <script>
+    const header = document.querySelector("#header");
+  const contenedor = document.querySelector("#contenedor");
+  const body = document.querySelector("body");
+  window.addEventListener("scroll", function(){
+      if(contenedor.getBoundingClientRect().top<10){
+          header.classList.add("scroll")
+      }
+      else{
+          header.classList.remove("scroll")
+      }
+  })
+  </script>
