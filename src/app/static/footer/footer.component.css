@@ -27,3 +27,21 @@ a:hover{
     width: 150px;
     height: 100px;
 }
+.linea{
+    margin: 0 auto;
+    height: 1px;
+    width: 95%;
+    background: white;
+}
+i{
+    color: white;   
+    margin-top: 7px;
+}
+@media screen and (max-width: 560px) {
+    #arreglo1{        
+        text-align: center;    
+    }
+    #arreglo2{        
+        text-align: center;
+    }
+}
