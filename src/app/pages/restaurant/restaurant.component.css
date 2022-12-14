@@ -5,7 +5,8 @@
 	z-index: 1;
 	line-height: 10vh;
     overflow-x: auto;
-
+    position: relative;
+    bottom: 18px;
 }
 
 .card1{
