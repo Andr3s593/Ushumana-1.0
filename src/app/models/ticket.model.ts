@@ -10,8 +10,8 @@ export interface TicketUsuarioModel extends TicketModel {
     usuarios: UsuarioModel;
 }
 export interface CreateTicketUsuarioModel extends Omit<TicketModel, 'id' | 'usuarios'> {
-    usuarios: number;
+    
 }
 export interface UpdateTicketUsuarioModel extends Partial<TicketModel> {
-    id: number;
+    
 }

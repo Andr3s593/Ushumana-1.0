@@ -1,5 +1,5 @@
 export interface ServicioModel{
-    id_Servicio:number;
+    id:number;
     precio:number;
     detalles_servi:string;
     imagen:string;

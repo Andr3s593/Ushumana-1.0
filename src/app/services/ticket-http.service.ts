@@ -13,7 +13,7 @@ export class TickeHttpService {
 
   getAll(): Observable<TicketModel[]> {
     const url = `$(this.API_URL)`;
-    return this.httpClient.get<[TicketModel]>(this.API_URL);
+    return this.httpClient.get<[TicketModel]>(url);
   }
 
   getOne(id: TicketModel['id']) {
@@ -25,7 +25,7 @@ export class TickeHttpService {
     return this.httpClient.post<TicketModel>(this.API_URL, Ticket);
   }
 
-  update(id: TicketModel['id'], Ticket: UpdateTicketUsuarioModel): Observable<TicketModel> {
+  update(Ticket: UpdateTicketUsuarioModel, id: TicketModel['id']): Observable<TicketModel> {
     const url = `${this.API_URL}/${id}`;
     return this.httpClient.put<TicketModel>(url, Ticket);
 
