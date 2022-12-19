@@ -1,8 +1,7 @@
 export interface UsuarioModel {
-    id_Usuario:number;
+    id:number;
     nombres:string;
     apellidos:string;
-    fecha_de_nacimiento:Date;
-    cedula:number;
+    fecha_de_nacimiento:Date;    
     correo:string;
 }
