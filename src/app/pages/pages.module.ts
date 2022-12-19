@@ -7,6 +7,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ReservasComponent } from './reservas/reservas.component';
+import { CompraticketComponent } from './compraticket/compraticket.component';
+import { ComprarestauranteComponent } from './comprarestaurante/comprarestaurante.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,18 @@ import { ReservasComponent } from './reservas/reservas.component';
     RestaurantComponent,
     TicketComponent,
     ReservasComponent,
-    TicketComponent
+    TicketComponent,
+    CompraticketComponent,
+    ComprarestauranteComponent
   ],
   exports:[
     HomeComponent,
     DashboardComponent,
     TicketComponent,
     ReservasComponent,
-    TicketComponent
+    TicketComponent,
+    CompraticketComponent,
+    ComprarestauranteComponent
   ],
   imports: [
     CommonModule,
