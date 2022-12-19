@@ -1,3 +1,5 @@
+import { CompraticketComponent } from './compraticket/compraticket.component';
+import { ComprarestauranteComponent } from './comprarestaurante/comprarestaurante.component';
 import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { TicketComponent } from './ticket/ticket.component';
@@ -14,7 +16,9 @@ const routes:Routes = [
     {path:'dashboard', component:DashboardComponent},
     {path:'restaurante', component:RestaurantComponent},
     {path:'reservas', component:ReservasComponent},
-    {path:'tickets', component:TicketComponent}
+    {path:'tickets', component:TicketComponent},
+    {path:'compraRestaurante', component:ComprarestauranteComponent},
+    {path:'compraTicket', component:CompraticketComponent}
   ]}
 ]
 
