@@ -1,6 +1,6 @@
 import { UsuarioModel } from './usuario.model';
 export interface TicketModel {
-    id_Ticket:number;    
+    id:number;    
     precio:number;
     servicio:string;    
     detalles:string;
@@ -9,3 +9,11 @@ export interface TicketModel {
 export interface TicketUsuarioModel extends TicketModel{    
     usuarios:UsuarioModel;
 }
+export interface CreateTicketUsuarioModel  extends Omit < TicketModel, 'id'| 'usuario'> {
+    usuarios: number;
+    
+    }
+    
+    export interface UpdateTicketUsuarioModel extends Partial< TicketModel> {
+       id: number ;
+    }
