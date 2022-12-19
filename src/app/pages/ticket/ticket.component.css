@@ -56,6 +56,7 @@ header{
 }
 .contenedor>div:hover{
     background-color: #11294d;
+    transition: 0.5s;
 }
 
 .informacion{
@@ -79,17 +80,22 @@ header{
     font-size: 17px;
     font-weight: 300;
 }
-.informacion button{
+.informacion a{
     background-color: #263143;
     width: 100px;
     height: 35px;
     border-radius: 10px;
-    border: none;
-
+    border: none;    
     font-size: 17px;
     font-weight: 300;
     cursor: pointer;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
 }
-.informacion button:hover{
+.informacion a:hover{
     background-color: #2D4263;
+    color: rgb(187, 109, 36);
+    transition: 1s;
 }

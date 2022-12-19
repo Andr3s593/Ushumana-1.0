@@ -1,0 +1,41 @@
+#navbar{
+    background: #F77F00;
+    position: relative;
+    bottom: 10px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: #FFFF;    
+    margin: 1px;
+}
+a:hover{
+    color: #003049;
+    transition: 0.5s;    
+}
+.imagen-logo{
+    width: 120px;
+    height: 80px;
+}
+#col2:hover{    
+    background: #003049;
+    transition: 0.5s;
+}
+#col3:hover{    
+    background: #003049;
+    transition: 0.5s;
+}
+#col4:hover{    
+    background: #003049;
+    transition: 0.5s;
+}
+#col5:hover{    
+    background: #003049;
+    transition: 0.5s;
+}
+#col6:hover{    
+    background: #003049;
+    transition: 0.5s;
+}
+@media screen and (max-width: 576px) {            
+}
