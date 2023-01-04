@@ -7,6 +7,7 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
   styleUrls: ['./restaurant.component.css']
 })
 export class RestaurantComponent {
+  /*/
   constructor(private restaurantHttpService: RestaurantService) {
   }
   getRestaurants() {
@@ -47,5 +48,5 @@ export class RestaurantComponent {
       console.log(response)
     }
     )
-  }
+  }/*/
 }

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./ticket.component.css']
 })
 export class TicketComponent {
+  /*/
   constructor(private ticketHttpService: TickeHttpService) {
   }
   getRestaurants() {
@@ -46,4 +47,5 @@ export class TicketComponent {
     }
     )
   }
+  /*/
 }
