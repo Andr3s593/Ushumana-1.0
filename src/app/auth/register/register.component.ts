@@ -29,6 +29,7 @@ export class RegisterComponent {
       console.log(response);
     });
   }  
+  
   createUsuarios() {
     const data = {            
       nombres: this.createUsuario.nombres,
