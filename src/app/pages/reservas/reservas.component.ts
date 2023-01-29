@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./reservas.component.css']
 })
 export class ReservasComponent {
+  /*/
   constructor(private reservatHttpService: ReservatHttpService) {
   }
   getReservas() {
@@ -49,4 +50,5 @@ export class ReservasComponent {
     }
     )
   }
+  /*/
 }

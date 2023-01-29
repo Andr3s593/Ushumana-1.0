@@ -13,28 +13,28 @@
                     <h5>Nombres</h5>
                 </label>
                 <br>
-                <input [(ngModel)]="createUsuario.nombres" value="{{createUsuario.nombres}}" name="nombres" id="nombreUsuario" placeholder="Example: Rodrigo Andres" type="text" required>
+                <input id="nombreUsuario" placeholder="Example: Rodrigo Andres" type="text" required>
                 <br>
                 <br>
                 <label for="apellidoUsuario">
                     <h5>Apellidos</h5>
                 </label>
                 <br>
-                <input [(ngModel)]="createUsuario.apellidos" value="{{createUsuario.apellidos}}" name="apellidos" id="apellidoUsuario" placeholder="Example: Pozo Torres" type="text" required>
+                <input id="apellidoUsuario" placeholder="Example: Pozo Torres" type="text" required>
                 <br>                            
                 <br>
                 <label for="email">
                     <h5>Email</h5>
                 </label>
                 <br>
-                <input [(ngModel)]="createUsuario.email" value="{{createUsuario.email}}" name="email" type="email" placeholder="Example: example@gmail.com" id="email" required>
+                <input type="email" placeholder="Example: example@gmail.com" id="email" required>
                 <br>
                 <br>                
                 <label for="password">
                     <h5>Contraseña</h5>
                 </label>
                 <br>
-                <input [(ngModel)]="createUsuario.password" value="{{createUsuario.password}}" name="password" minlength="8" type="password" id="password" required>
+                <input minlength="8" type="password" id="password" required>
                 <br>
                 <br>
                 <label for="password-repeat">
@@ -46,10 +46,10 @@
                 <br>
                 <label for="edad"><h5>Fecha de Nacimiento</h5></label>
                 <br>
-                <input [(ngModel)]="createUsuario.fecha_de_nacimiento" value="{{createUsuario.fecha_de_nacimiento}}" name="fecha_de_nacimiento" type="date" required>
+                <input type="date" required>
                 <br>                            
                 <br>                
-                <button (click)="createUsuarios()" type="submmit" class="btn btn-danger">Crear Cuenta</button>
+                <button type="submmit" class="btn btn-danger">Crear Cuenta</button>
             </form>
             <br>
         </div>        
