@@ -1,9 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
 import { StaticModule } from './../static/static.module';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,9 +17,12 @@ import { CommonModule } from '@angular/common';
     RegisterComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     RouterModule,
-    StaticModule
+    StaticModule,
+    HttpClientModule,
+        
   ]
 })
 export class AuthModule { }
