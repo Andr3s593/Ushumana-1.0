@@ -11,12 +11,12 @@ import { throwError } from 'rxjs';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {  
-  createUsuario: CreateUsuarioDto = {nombres:"",apellidos:"",email:"",password:"",fecha_de_nacimiento: new Date()};
+  createUsuario: CreateUsuarioDto = {nombres:"",apellidos:"",email:"",password:"",passwordRepeat:"",fecha_de_nacimiento: new Date()};
   constructor(private usuariotHttpService: RegisterHttpService, private router: Router) {
     this.initUsuario();
   }
   initUsuario(){
-    this.createUsuario = {nombres:"",apellidos:"",email:"",password:"",fecha_de_nacimiento: new Date()};
+    this.createUsuario = {nombres:"",apellidos:"",email:"",password:"", passwordRepeat:"",fecha_de_nacimiento: new Date()};
   }
 
   getUsuarios() {
@@ -31,11 +31,17 @@ export class RegisterComponent {
   }  
   
   createUsuarios() {
+    if (this.createUsuario.password !== this.createUsuario.passwordRepeat) {
+      alert("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+      return;
+    }
+  
     const data = {            
       nombres: this.createUsuario.nombres,
       apellidos: this.createUsuario.apellidos,
       email: this.createUsuario.email,
       password: this.createUsuario.password,
+      passwordRepeat: this.createUsuario.passwordRepeat,
       fecha_de_nacimiento: this.createUsuario.fecha_de_nacimiento
     }
     this.usuariotHttpService.create(data).pipe(
@@ -53,6 +59,7 @@ export class RegisterComponent {
       this.router.navigate(['/login']);
     });
   }
+  
 
   updateUsuario() {
     const data = {

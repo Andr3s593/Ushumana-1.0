@@ -6,7 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     LoginComponent,
@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
     RouterModule,
     StaticModule,
     HttpClientModule,
-        
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }
