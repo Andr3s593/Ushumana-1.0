@@ -41,7 +41,7 @@
                     <h5>Repetir Contraseña</h5>
                 </label>
                 <br>
-                <input minlength="8" type="password" id="password-repeat" required>
+                <input [(ngModel)]="createUsuario.passwordRepeat" value="{{createUsuario.passwordRepeat}}" name="passwordRepeat" minlength="8" type="password" id="password-repeat" required>
                 <br>
                 <br>
                 <label for="edad"><h5>Fecha de Nacimiento</h5></label>
