@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,      
@@ -17,7 +18,8 @@ import { AppComponent } from './app.component';
     PagesModule,
     AuthModule,
     StaticModule,   
-    NotFoundModule         
+    NotFoundModule,
+         
   ],
   providers: [],
   bootstrap: [AppComponent]

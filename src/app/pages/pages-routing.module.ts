@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import{RegistrecompraComponent}from'./registrocompa/registrocompra.component';
 import { formularioComponent } from './formulario/formulario.component';
 
 const routes:Routes = [
@@ -20,6 +21,7 @@ const routes:Routes = [
     {path:'tickets', component:TicketComponent},
     {path:'compraRestaurante', component:ComprarestauranteComponent},
     {path:'compraTicket', component:CompraticketComponent},
+    {path:'registrocompra',component:RegistrecompraComponent},
     {path:'formulario', component:formularioComponent}
   ]}
 ]
