@@ -9,6 +9,7 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { CompraticketComponent } from './compraticket/compraticket.component';
 import { ComprarestauranteComponent } from './comprarestaurante/comprarestaurante.component';
+import{RegistrecompraComponent}from'./registrocompa/registrocompra.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { ComprarestauranteComponent } from './comprarestaurante/comprarestaurant
     ReservasComponent,
     TicketComponent,
     CompraticketComponent,
-    ComprarestauranteComponent
+    ComprarestauranteComponent,
+    RegistrecompraComponent,
+
   ],
   exports:[
     HomeComponent,
