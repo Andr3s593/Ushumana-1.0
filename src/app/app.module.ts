@@ -18,8 +18,7 @@ import { AppComponent } from './app.component';
     PagesModule,
     AuthModule,
     StaticModule,   
-    NotFoundModule,
-         
+    NotFoundModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

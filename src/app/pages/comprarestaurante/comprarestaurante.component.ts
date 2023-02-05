@@ -1,53 +1,30 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Subject, Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-comprarestaurante',
   templateUrl: './comprarestaurante.component.html',
   styleUrls: ['./comprarestaurante.component.css']
 })
-export class ComprarestauranteComponent { 
-  @Output() notify: EventEmitter<number> = new EventEmitter();
-  @Output() notify2: EventEmitter<number> = new EventEmitter();
-  cantidades: FormControl | undefined;
-  precio: FormControl | undefined;
-  mutiplicar: any;
-  multiplicar: any;
-  total: any;
-  a: number | undefined;
-  b: number | undefined;
-  constructor() {
+export class ComprarestauranteComponent {   
+  quantityControl = new FormControl(0);
+  private itemPrice = 6;
 
-  }
+  private quantitySubject = new Subject<number>();
+  quantity$ = this.quantitySubject.asObservable();
+
+  price$: Observable<number> = this.quantity$.pipe(
+    map(quantity => this.itemPrice * quantity),
+    startWith(this.itemPrice),
+  );
 
   ngOnInit() {
-    this.cantidad();
-    //  this.martes();
-    this.precios();
-  }
-  cantidad() {
-    this.cantidades = new FormControl();
-    this. cantidades.valueChanges.subscribe(value => {
-      this.multiplicar = parseInt(value, 10);
-      this.notify2.emit(this.multiplicar);
-      // this.sumar = value;
-      console.log(typeof this.multiplicar);
+    this.quantityControl.valueChanges.subscribe(value => {
+      if (value !== null) {
+        this.quantitySubject.next(value);
+      }
     });
-  }
- 
-  
-  precios() {
-    this.notify2.subscribe(cambios => {
-      console.log(typeof cambios);
-
-      this.a = cambios;git
-      console.log(this.a);
-
-    });
-    // this.notify2.subscribe(changes => {
-    //   this.b = changes;
-    //   console.log(this.b);
-
-    // });
   }
 }
