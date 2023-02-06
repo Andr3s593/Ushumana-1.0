@@ -12,6 +12,8 @@ import { ComprarestauranteComponent } from './comprarestaurante/comprarestaurant
 import{RegistrecompraComponent}from'./registrocompa/registrocompra.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ComprayaguarlocroComponent } from './comprayaguarlocro/comprayaguarlocro.component';
+import { CompraempanadasComponent } from './compraempanadas/compraempanadas.component';
 
 @NgModule({
   
@@ -23,6 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReservasComponent,    
     CompraticketComponent,
     ComprarestauranteComponent,
+    ComprayaguarlocroComponent,
+    CompraempanadasComponent,
     RegistrecompraComponent,
   ],
   exports:[
@@ -33,6 +37,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReservasComponent,    
     CompraticketComponent,
     ComprarestauranteComponent,
+    ComprayaguarlocroComponent,
+    CompraempanadasComponent,
     RegistrecompraComponent,    
   ],
   imports: [
