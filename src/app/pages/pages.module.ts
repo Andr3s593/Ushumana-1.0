@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import{ComprahamburgesaComponent}from './comprahamburgesa/comprahamburgesa.component';
 import{ComprapolloComponent}from './comprapollo/comprapollo.component'
+import { ComprafritadaComponent } from './comparfritada/comprafritada.component';
 
 @NgModule({
   
@@ -28,6 +29,7 @@ import{ComprapolloComponent}from './comprapollo/comprapollo.component'
     RegistrecompraComponent,
     ComprahamburgesaComponent,
     ComprapolloComponent,
+    ComprafritadaComponent
   ],
   exports:[
     HomeComponent,
@@ -40,6 +42,7 @@ import{ComprapolloComponent}from './comprapollo/comprapollo.component'
     RegistrecompraComponent,    
     ComprahamburgesaComponent,
     ComprapolloComponent,
+    ComprafritadaComponent
   ],
   imports: [
     CommonModule,
