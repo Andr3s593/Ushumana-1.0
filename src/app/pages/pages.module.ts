@@ -46,7 +46,7 @@ import{ComprapolloComponent}from './comprapollo/comprapollo.component'
     RouterModule,
     StaticModule,    
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ]
 })
 export class PagesModule { }
