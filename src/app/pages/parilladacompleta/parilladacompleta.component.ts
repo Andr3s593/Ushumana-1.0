@@ -10,7 +10,7 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class parilladacompletaComponent {   
   quantityControl = new FormControl(0);
-  private itemPrice = 7.99;
+  private itemPrice = 11.99;
 
   private quantitySubject = new Subject<number>();
   quantity$ = this.quantitySubject.asObservable();

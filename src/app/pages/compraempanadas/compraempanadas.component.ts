@@ -10,7 +10,7 @@ import { map, startWith } from 'rxjs/operators';
 })
 export class CompraempanadasComponent {   
   empanadas = new FormControl(0);
-  private itemPrice = 5;
+  private itemPrice = 10;
 
   private empanadasSubject = new Subject<number>();
   quantity$ = this.empanadasSubject.asObservable();

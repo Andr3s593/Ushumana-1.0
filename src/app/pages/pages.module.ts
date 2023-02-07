@@ -34,8 +34,8 @@ import { ComprafritadaComponent } from './comparfritada/comprafritada.component'
     RegistrecompraComponent,
     ComprahamburgesaComponent,
     ComprapolloComponent,
-    parilladacompletaComponent
-    ComprafritadaComponent
+    parilladacompletaComponent,
+    ComprafritadaComponent,    
   ],
   exports:[
     HomeComponent,
@@ -50,7 +50,7 @@ import { ComprafritadaComponent } from './comparfritada/comprafritada.component'
     RegistrecompraComponent,    
     ComprahamburgesaComponent,
     ComprapolloComponent,
-    parilladacompletaComponent
+    parilladacompletaComponent,
     ComprafritadaComponent
   ],
   imports: [

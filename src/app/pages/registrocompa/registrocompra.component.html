@@ -16,7 +16,9 @@
   <tbody>
     <tr *ngFor="let historial of historialCompra" class="">
       <td>{{ historial._id }}</td>
-      <td><img src="../../../assets/imagenesdeushimana/restaurantes.jpg" style="height: 100px; width: 150px;"></td>      
+      <td>
+        <img src="{{historial.imagen}}" style="height: 100px; width: 150px;">
+      </td>         
       <td>{{ historial.nombreplatillo }}</td>
       <td>{{ historial.cantidad }}</td>
       <td>{{ historial.precioplatillo }}</td>          

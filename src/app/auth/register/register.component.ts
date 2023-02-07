@@ -32,6 +32,14 @@ export class RegisterComponent {
   }  
   
   createUsuarios() {
+    if (!this.createUsuario.nombres || !this.createUsuario.apellidos || !this.createUsuario.email || !this.createUsuario.password || !this.createUsuario.passwordRepeat || !this.createUsuario.fechadenacimiento) {
+      Swal.fire(
+        'Campos Vacios',
+        'Todos los campos son requeridos. Por favor, inténtelo de nuevo.',
+        'error'
+      )         
+      return;
+    }
     if (this.createUsuario.password !== this.createUsuario.passwordRepeat) {
       Swal.fire(
         'Error en la Contraseña',
@@ -47,15 +55,7 @@ export class RegisterComponent {
         'error'
       );
       return;
-    }
-    if (!this.createUsuario.nombres || !this.createUsuario.apellidos || !this.createUsuario.email || !this.createUsuario.password || !this.createUsuario.passwordRepeat || !this.createUsuario.fechadenacimiento) {
-      Swal.fire(
-        'Campos Vacios',
-        'Todos los campos son requeridos. Por favor, inténtelo de nuevo.',
-        'error'
-      )         
-      return;
-    }
+    }    
 
     const fechaActual = new Date();
     const fechaNacimiento = new Date(this.createUsuario.fechadenacimiento);

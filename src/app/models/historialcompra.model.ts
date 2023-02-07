@@ -1,8 +1,9 @@
 export interface HistorialCompraModel{
     _id:number;
+    imagen: string;
     nombreplatillo:string;
-    cantidad:string;
-    precioplatillo:string;
+    cantidad:number;
+    precioplatillo:number;
 }export interface CreateHistorialCompraDto extends Omit<HistorialCompraModel, '_id'> {
 
 }
