@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CompraparilladacompletaComponent } from './compraparilladacompleta.component';
+import { CompraparilladacompletaComponent } from './compraparillada.component';
 
 describe('CompraparilladacompletaComponent', () => {
   let component:CompraparilladacompletaComponent;
@@ -8,7 +8,7 @@ describe('CompraparilladacompletaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CompraparilladacompletaComponent]
+      declarations: [CompraparilladacompletaComponent]
     })
     .compileComponents();
 

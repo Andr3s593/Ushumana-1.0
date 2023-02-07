@@ -7,21 +7,22 @@ import { CreateHistorialCompraDto } from 'src/app/models/historialcompra.model';
 import { HistorialCompraService } from 'src/app/services/historial-compra.service';
 import Swal from 'sweetalert2';
 
+
 @Component({
-  selector: 'app-compraempanadas',
-  templateUrl: './compraempanadas.component.html',
-  styleUrls: ['./compraempanadas.component.css']
+  selector: 'app-compraparilladacompleta',
+  templateUrl: './compraparilladacompleta.component.html',
+  styleUrls: ['./compraparilladacompleta.component.css']
 })
-export class CompraempanadasComponent {
-  createEmpanadasPedido: CreateHistorialCompraDto = { imagen: "", nombreplatillo: "", cantidad: 0, precioplatillo: 0 };
-  constructor(private EmpanadasHttpService: HistorialCompraService, private router: Router, private elementRef: ElementRef) {
+
+export class CompraparilladacompletaComponent {
+  createParilladacompletaPedido: CreateHistorialCompraDto = { imagen: "", nombreplatillo: "", cantidad: 0, precioplatillo: 0 };
+  constructor(private parilladacompletaHttpService: HistorialCompraService, private router: Router, private elementRef: ElementRef) {
     this.quantityInput = this.elementRef.nativeElement.querySelector('#input-largo');
   }
 
 
   quantityControl = new FormControl(0);
   private itemPrice = 6;
-
   private quantitySubject = new Subject<number>();
   quantity$ = this.quantitySubject.asObservable();
 
@@ -39,7 +40,7 @@ export class CompraempanadasComponent {
 
   @ViewChild('quantityInput', { static: true }) quantityInput: ElementRef<HTMLInputElement>;
 
-  createEmpanadas() {
+  createParilladacompleta() {
     const quantity = parseInt(this.quantityInput.nativeElement.value, 10);
     if (quantity <= 0) {
     alert("Debe ingresar una cantidad mayor a 0");
@@ -48,12 +49,12 @@ export class CompraempanadasComponent {
     this.price$.subscribe(price => {
       const total = quantity * price;
       const data = {
-        imagen: "https://comidaecuatoriana.online/wp-content/uploads/2022/07/receta-de-morocho-con-empanadas.jpg",
-        nombreplatillo: "Empanadas con morocho",
+        imagen: "https://i.ytimg.com/vi/quY9vReEnhw/maxresdefault.jpg",
+        nombreplatillo: "Parillada Completa",
         cantidad: quantity,
         precioplatillo: total,
       }
-      this.EmpanadasHttpService.create(data).pipe().subscribe(response => {
+      this.parilladacompletaHttpService.create(data).pipe().subscribe(response => {
         console.log(response);      
         Swal.fire({
           icon: 'success',
