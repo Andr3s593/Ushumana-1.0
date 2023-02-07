@@ -13,8 +13,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./compraempanadas.component.css']
 })
 export class CompraempanadasComponent {
-  createHamburguesaPedido: CreateHistorialCompraDto = { imagen: "", nombreplatillo: "", cantidad: 0, precioplatillo: 0 };
-  constructor(private hamburguesaHttpService: HistorialCompraService, private router: Router, private elementRef: ElementRef) {
+  createEmpanadasPedido: CreateHistorialCompraDto = { imagen: "", nombreplatillo: "", cantidad: 0, precioplatillo: 0 };
+  constructor(private EmpanadasHttpService: HistorialCompraService, private router: Router, private elementRef: ElementRef) {
     this.quantityInput = this.elementRef.nativeElement.querySelector('#input-largo');
   }
 
@@ -39,7 +39,7 @@ export class CompraempanadasComponent {
 
   @ViewChild('quantityInput', { static: true }) quantityInput: ElementRef<HTMLInputElement>;
 
-  createHamburguesa() {
+  createEmpanadas() {
     const quantity = parseInt(this.quantityInput.nativeElement.value, 10);
     if (quantity <= 0) {
     alert("Debe ingresar una cantidad mayor a 0");
@@ -49,11 +49,11 @@ export class CompraempanadasComponent {
       const total = quantity * price;
       const data = {
         imagen: "https://comidaecuatoriana.online/wp-content/uploads/2022/07/receta-de-morocho-con-empanadas.jpg",
-        nombreplatillo: "Empanada con morocho",
+        nombreplatillo: "Empanadas con morocho",
         cantidad: quantity,
         precioplatillo: total,
       }
-      this.hamburguesaHttpService.create(data).pipe().subscribe(response => {
+      this.EmpanadasHttpService.create(data).pipe().subscribe(response => {
         console.log(response);      
         Swal.fire({
           icon: 'success',
