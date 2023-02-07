@@ -4,6 +4,7 @@ import { catchError } from 'rxjs/operators';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { throwError } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -11,12 +12,12 @@ import { throwError } from 'rxjs';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {  
-  createUsuario: CreateUsuarioDto = {nombres:"",apellidos:"",email:"",password:"",passwordRepeat:"",fecha_de_nacimiento: new Date()};
+  createUsuario: CreateUsuarioDto = {nombres:"",apellidos:"",email:"",password:"",passwordRepeat:"",fechadenacimiento: new Date()};
   constructor(private usuariotHttpService: RegisterHttpService, private router: Router) {
     this.initUsuario();
   }
   initUsuario(){
-    this.createUsuario = {nombres:"",apellidos:"",email:"",password:"", passwordRepeat:"",fecha_de_nacimiento: new Date()};
+    this.createUsuario = {nombres:"",apellidos:"",email:"",password:"", passwordRepeat:"",fechadenacimiento: new Date()};
   }
 
   getUsuarios() {
@@ -32,48 +33,77 @@ export class RegisterComponent {
   
   createUsuarios() {
     if (this.createUsuario.password !== this.createUsuario.passwordRepeat) {
-      alert("Las contraseñas no coinciden. Por favor, inténtelo de nuevo.");
+      Swal.fire(
+        'Error en la Contraseña',
+        'Las contraseñas no coinciden. Por favor, inténtelo de nuevo.',
+        'error'
+      )         
       return;
     }
-  
+    if (this.createUsuario.password.length < 8) {
+      Swal.fire(
+        'Contraseña demasiado corta',
+        'La contraseña debe tener al menos 8 caracteres. Por favor, inténtelo de nuevo.',
+        'error'
+      );
+      return;
+    }
+    if (!this.createUsuario.nombres || !this.createUsuario.apellidos || !this.createUsuario.email || !this.createUsuario.password || !this.createUsuario.passwordRepeat || !this.createUsuario.fechadenacimiento) {
+      Swal.fire(
+        'Campos Vacios',
+        'Todos los campos son requeridos. Por favor, inténtelo de nuevo.',
+        'error'
+      )         
+      return;
+    }
+
+    const fechaActual = new Date();
+    const fechaNacimiento = new Date(this.createUsuario.fechadenacimiento);
+    const edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+    if (edad < 18) {
+      Swal.fire(
+        'Edad Insuficiente',
+        'Para registrarse debe tener al menos 18 años. Por favor, inténtelo de nuevo.',
+        'error'
+      )         
+      return;
+    }
+
     const data = {            
       nombres: this.createUsuario.nombres,
       apellidos: this.createUsuario.apellidos,
       email: this.createUsuario.email,
       password: this.createUsuario.password,
       passwordRepeat: this.createUsuario.passwordRepeat,
-      fecha_de_nacimiento: this.createUsuario.fecha_de_nacimiento
+      fechadenacimiento: this.createUsuario.fechadenacimiento
     }
     this.usuariotHttpService.create(data).pipe(
       catchError(error => {
-        if (error.status === 409) {
+        if (error.status === 409) {          
           alert("Hubo un error al crear el registro");
           } else {
-          alert("Este correo electrónico ya está en uso. Por favor, elige otro.");
+            Swal.fire(
+              'Error Email',
+              'Este correo electrónico ya está en uso. Por favor, elige otro.',
+              'error'
+            )          
           }
         return throwError(() => error);
       })
     ).subscribe(response => {
       console.log(response);
-      alert("Usuario creado exitosamente");
+      Swal.fire({
+        icon: 'success',
+        title: 'Usuario Registrado',
+        text: 'Usuario creado exitosamente',        
+      })      
       this.router.navigate(['/login']);
     });
   }
+
   
 
-  updateUsuario() {
-    const data = {
-      nombres: "RICARDO ANDRES",
-      apellidos: "PIEDRA CHICAIZA",
-      email: "13245",
-      password: "Ricardo ANDRES",
-      fecha_de_nacimiento: new Date("1990-03-15")
-    }
-    this.usuariotHttpService.update(data, 5).subscribe(response => {
-      console.log(response);
-    }
-    );
-  }
+ 
   deleteUsuario() {
     this.usuariotHttpService.destroy(5).subscribe(response => {
       console.log(response)

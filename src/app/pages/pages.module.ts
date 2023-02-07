@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import{ComprahamburgesaComponent}from './comprahamburgesa/comprahamburgesa.component';
 import{ComprapolloComponent}from './comprapollo/comprapollo.component'
 import { parilladacompletaComponent } from './parilladacompleta/parilladacompleta.component';
+import { ComprafritadaComponent } from './comparfritada/comprafritada.component';
 
 @NgModule({
   
@@ -30,6 +31,7 @@ import { parilladacompletaComponent } from './parilladacompleta/parilladacomplet
     ComprahamburgesaComponent,
     ComprapolloComponent,
     parilladacompletaComponent
+    ComprafritadaComponent
   ],
   exports:[
     HomeComponent,
@@ -43,6 +45,7 @@ import { parilladacompletaComponent } from './parilladacompleta/parilladacomplet
     ComprahamburgesaComponent,
     ComprapolloComponent,
     parilladacompletaComponent
+    ComprafritadaComponent
   ],
   imports: [
     CommonModule,

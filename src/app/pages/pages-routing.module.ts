@@ -13,7 +13,7 @@ import { formularioComponent } from './formulario/formulario.component';
 import{ComprahamburgesaComponent}from './comprahamburgesa/comprahamburgesa.component';
 import{ComprapolloComponent}from './comprapollo/comprapollo.component';
 import { parilladacompletaComponent } from './parilladacompleta/parilladacompleta.component';
-
+import{ComprafritadaComponent}from './comparfritada/comprafritada.component';
 const routes:Routes = [
   {path:'home', 
   component:HomeComponent,
@@ -29,6 +29,7 @@ const routes:Routes = [
     {path:'comprahamburgesa',component :ComprahamburgesaComponent},
     {path:'comprapollo',component :ComprapolloComponent},
     {path:'compraparillada',component :parilladacompletaComponent}
+    {path:'comprafritada',component :ComprafritadaComponent}
   ]}
 ]
 

@@ -4,13 +4,13 @@ import { Subject, Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-comprapollo',
-  templateUrl: './comprapollo.component.html',
-  styleUrls: ['./comprapollo.component.css']
+  selector: 'app-comprafritada',
+  templateUrl: './comprfritada.component.html',
+  styleUrls: ['./comprafritada.component.css']
 })
-export class ComprapolloComponent {   
+export class ComprafritadaComponent {   
   quantityControl = new FormControl(0);
-  private itemPrice = 7.99;
+  private itemPrice = 6;
 
   private quantitySubject = new Subject<number>();
   quantity$ = this.quantitySubject.asObservable();

@@ -1,6 +1,8 @@
 import { HistorialCompraService } from './../../services/historial-compra.service';
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { HistorialCompraModel } from 'src/app/models/historialcompra.model';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-reservas',
@@ -26,10 +28,27 @@ export class RegistrecompraComponent {
       this.historialCompra = response;     
     });
   }    
-  deleteProduct(id:HistorialCompraModel['_id']) {
-    return this.historialCompraHttpService.destroy(id).subscribe((response) => {
-      this.historialCompra = this.historialCompra.filter(historialCompr => historialCompr._id != id);
-      //console.log(response);
+  deleteProduct(id: HistorialCompraModel['_id']) {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: '¿Quieres cancelar este pedido?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, cancelar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.value) {
+        this.historialCompraHttpService.destroy(id).subscribe((response) => {
+          this.historialCompra = this.historialCompra.filter(historialCompr => historialCompr._id != id);
+          Swal.fire(
+            'Cancelado!',
+            'El pedido ha sido cancelado con éxito.',
+            'success'
+          );
+        });
+      }
     });
-  }
+  } 
 }

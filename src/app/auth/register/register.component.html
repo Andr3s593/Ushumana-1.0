@@ -28,6 +28,7 @@
                 </label>
                 <br>
                 <input [(ngModel)]="createUsuario.email" value="{{createUsuario.email}}" name="email" type="email" placeholder="Example: example@gmail.com" id="email" required>
+
                 <br>
                 <br>                
                 <label for="password">
@@ -46,10 +47,10 @@
                 <br>
                 <label for="edad"><h5>Fecha de Nacimiento</h5></label>
                 <br>
-                <input [(ngModel)]="createUsuario.fecha_de_nacimiento" value="{{createUsuario.fecha_de_nacimiento}}" name="fecha_de_nacimiento" type="date" required>
+                <input [(ngModel)]="createUsuario.fechadenacimiento" value="{{createUsuario.fechadenacimiento}}" name="fechadenacimiento" type="date" required>
                 <br>                            
                 <br>                
-                <button (click)="createUsuarios()" type="submmit" class="btn btn-danger">Crear Cuenta</button>
+                <button (click)="createUsuarios()" type="submit" class="btn btn-danger">Crear Cuenta</button>
             </form>
             <br>
         </div>        

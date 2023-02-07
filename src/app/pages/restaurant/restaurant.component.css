@@ -119,10 +119,9 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   background-color: rgb(252, 136, 3);
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin: 100px 90px;
-  margin-left: 47%;
+  border-radius: 10px;    
+  margin-top: 20px;
+  margin-left: 38%;
   color: #fff;
   text-decoration: none;
  text-align: center;
@@ -130,13 +129,14 @@ body{
 }
 
 .btn:hover {
-  background-color: transparent;
+  background-color: #2D4263;
   border: 2px solid rgb(160, 160, 160);
-  color: black;
+  color: White;
+  transition: 0.5s;
 }
 @media screen  and (max-width: 800px) {
     .carousel-inner{
-        height:50vh;
+        height:40vh;
         width: 100%;
         z-index: 1;
         line-height: 10vh;
