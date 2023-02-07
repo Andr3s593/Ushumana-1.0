@@ -12,6 +12,8 @@ import { ComprarestauranteComponent } from './comprarestaurante/comprarestaurant
 import{RegistrecompraComponent}from'./registrocompa/registrocompra.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ComprayaguarlocroComponent } from './comprayaguarlocro/comprayaguarlocro.component';
+import { CompraempanadasComponent } from './compraempanadas/compraempanadas.component';
 import{ComprahamburgesaComponent}from './comprahamburgesa/comprahamburgesa.component';
 import{ComprapolloComponent}from './comprapollo/comprapollo.component'
 import { parilladacompletaComponent } from './parilladacompleta/parilladacompleta.component';
@@ -27,6 +29,8 @@ import { ComprafritadaComponent } from './comparfritada/comprafritada.component'
     ReservasComponent,    
     CompraticketComponent,
     ComprarestauranteComponent,
+    ComprayaguarlocroComponent,
+    CompraempanadasComponent,
     RegistrecompraComponent,
     ComprahamburgesaComponent,
     ComprapolloComponent,
@@ -41,6 +45,8 @@ import { ComprafritadaComponent } from './comparfritada/comprafritada.component'
     ReservasComponent,    
     CompraticketComponent,
     ComprarestauranteComponent,
+    ComprayaguarlocroComponent,
+    CompraempanadasComponent,
     RegistrecompraComponent,    
     ComprahamburgesaComponent,
     ComprapolloComponent,
