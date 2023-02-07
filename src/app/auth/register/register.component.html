@@ -27,7 +27,12 @@
                     <h5>Email</h5>
                 </label>
                 <br>
+<<<<<<< HEAD
                 <input type="email" placeholder="Example: example@gmail.com" id="email" required>
+=======
+                <input [(ngModel)]="createUsuario.email" value="{{createUsuario.email}}" name="email" type="email" placeholder="Example: example@gmail.com" id="email" required>
+
+>>>>>>> d67b783feb95734c764f90b611533987a6586d58
                 <br>
                 <br>                
                 <label for="password">
@@ -41,15 +46,22 @@
                     <h5>Repetir Contraseña</h5>
                 </label>
                 <br>
-                <input minlength="8" type="password" id="password-repeat" required>
+                <input [(ngModel)]="createUsuario.passwordRepeat" value="{{createUsuario.passwordRepeat}}" name="passwordRepeat" minlength="8" type="password" id="password-repeat" required>
                 <br>
                 <br>
                 <label for="edad"><h5>Fecha de Nacimiento</h5></label>
                 <br>
+<<<<<<< HEAD
                 <input type="date" required>
                 <br>                            
                 <br>                
                 <button type="submmit" class="btn btn-danger">Crear Cuenta</button>
+=======
+                <input [(ngModel)]="createUsuario.fechadenacimiento" value="{{createUsuario.fechadenacimiento}}" name="fechadenacimiento" type="date" required>
+                <br>                            
+                <br>                
+                <button (click)="createUsuarios()" type="submit" class="btn btn-danger">Crear Cuenta</button>
+>>>>>>> d67b783feb95734c764f90b611533987a6586d58
             </form>
             <br>
         </div>        

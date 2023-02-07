@@ -1,0 +1,32 @@
+
+<div class="container table-responsive">
+<br>
+<table class="table table-warning text-center">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Foto</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Cancelar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let historial of historialCompra" class="">
+      <td>{{ historial._id }}</td>
+      <td><img src="../../../assets/imagenesdeushimana/restaurantes.jpg" style="height: 100px; width: 150px;"></td>      
+      <td>{{ historial.nombreplatillo }}</td>
+      <td>{{ historial.cantidad }}</td>
+      <td>{{ historial.precioplatillo }}</td>          
+      <td>En camino</td>      
+
+      <td>
+        <a style="color: white;" class="btn btn-danger" (click)="deleteProduct(historial._id)">Cancelar</a>
+      </td>    
+  </tbody>
+</table>
+<br>
+<div class="espacio"></div>
+</div>

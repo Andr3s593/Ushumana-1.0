@@ -9,31 +9,38 @@ import { RestaurantComponent } from './restaurant/restaurant.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { CompraticketComponent } from './compraticket/compraticket.component';
 import { ComprarestauranteComponent } from './comprarestaurante/comprarestaurante.component';
+import{RegistrecompraComponent}from'./registrocompa/registrocompra.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
+  
   declarations: [
     HomeComponent,
     DashboardComponent,
     RestaurantComponent,
     TicketComponent,
-    ReservasComponent,
-    TicketComponent,
+    ReservasComponent,    
     CompraticketComponent,
-    ComprarestauranteComponent
+    ComprarestauranteComponent,
+    RegistrecompraComponent,
   ],
   exports:[
     HomeComponent,
     DashboardComponent,
+    RestaurantComponent,
     TicketComponent,
-    ReservasComponent,
-    TicketComponent,
+    ReservasComponent,    
     CompraticketComponent,
-    ComprarestauranteComponent
+    ComprarestauranteComponent,
+    RegistrecompraComponent,    
   ],
   imports: [
     CommonModule,
     RouterModule,
-    StaticModule
+    StaticModule,    
+    MatFormFieldModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }

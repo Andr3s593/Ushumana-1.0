@@ -49,4 +49,8 @@ export class RestaurantComponent {
     }
     )
   }/*/
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> d67b783feb95734c764f90b611533987a6586d58

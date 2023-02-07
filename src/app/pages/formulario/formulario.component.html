@@ -1,0 +1,56 @@
+<body>
+    <div class="container">
+       <div class="title">
+        <h1>Forma de Pago </h1>
+       </div>
+         <br>
+       <form  id="formularioPago" name="formularioPago" class="needs-validatior">
+  
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombres</label>
+            <input type="text" name="nombres" id="nombre" class="form-control" placeholder="" required>
+        </div>
+        <div class="mb-3">
+            <label for="apellido" class="form-label">Apellidos</label>
+            <input type="text" name="apellidos" id="apellido" class="form-control" placeholder="" required>
+        </div>
+
+        <div class="row">
+            <div class=" col">
+                <label for="email" class="form-label">Correo Electronico</label>
+                <input type="email" class="form-control"  name="email" id="email"  placeholder="bpm@gmail.com" required>
+                <div class="invalid-feedback">
+                    Ingresa una direccion de correo electronico valida
+                </div>
+            </div>
+        </div>
+
+        <div class="row1">
+            <div class="col">
+            <div class="mb-3">
+                <label for="tipoTarjeta" class="form-label">Tipo de tarjeta</label>
+               <select class="form-select" id="TipoTarjeta" name="tipoTarjeta">
+                <option value="Escoger...">Escoger...</option>
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="American Express">American Express</option>
+                <option value="Diners Club">Diners Club</option>
+               </select>
+            </div>
+            </div>
+
+            <div class="col">
+                <label for="NumeroTarjeta" class="form-label">Numero De Tarjeta</label>
+                <input type="NumeroTarjeta" class="form-control"  name="NumeroTarjeta" id="NumeroTarjeta"  placeholder="23242730" required>                
+            </div>
+            <div class="col">
+            <label for="FechaCaducidad" class="form-label">Fecha de Caducidad</label>
+            <input type="date" name="fechaCducidad" class="form-control" id="fechaCaducidad" placeholder="dd/mm/aaaa">
+        </div>
+        </div>
+    
+            <button class="btn mt-3" type="submit">Cancelar</button>            
+            <button class="btn mt-3 ms-1" type="submit">Validar Pago</button>       
+    </form>
+    </div>
+</body>

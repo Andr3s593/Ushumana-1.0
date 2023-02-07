@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: rgb(187, 109, 36);
+    
 }
 body {
     font-family: 'Space Grotesk', sans-serif;
@@ -46,8 +47,11 @@ header{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 200px;
+    gap: 100px;
     margin-bottom: 20px;
+    background-image: url(../../../assets/logos/logo3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .contenedor>div{
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -60,12 +64,11 @@ header{
 }
 
 .informacion{
-    height: 150px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:15px;
 }
 .informacion>p:first-child{
     font-family: 'Montserrat', sans-serif;
