@@ -5,7 +5,7 @@ export interface UsuarioModel {
     email:string;
     password:string;
     passwordRepeat:string;
-    fecha_de_nacimiento:Date;        
+    fechadenacimiento:Date;        
 }
 export interface CreateUsuarioDto extends Omit<UsuarioModel, 'id'> {
 
