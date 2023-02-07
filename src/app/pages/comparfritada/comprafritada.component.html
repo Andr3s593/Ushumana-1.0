@@ -6,12 +6,12 @@
                 <h3 id="estilo-h3" class="text-center">Fritada</h3>
                 <img id="imagen-posicion" class="card-img-top" src="../../../assets/carruselrestaurante/restaurante2.jpg"
                     alt="Title">
-                    <div class="card-body">
-                        <div class="alert alert-danger" role="alert">
-                            <p><strong>Nota:</strong> Para evitar errores en nuestro sistema puede ordenar un maximo de 10
-                                platos</p>    
-                        </div>                                            
-                        <h4 class="card-title text-center">Precio: 7,99</h4>
+                <div class="card-body">
+                    <div class="alert alert-danger" role="alert">
+                        <p><strong>Nota:</strong> Para evitar errores en nuestro sistema puede ordenar un maximo de 10
+                            platos</p>
+                      </div>
+                    
                     <div class="container">
                         <form action="">
                             <div class="row text-center">
@@ -19,30 +19,31 @@
                                     <label for="cantidad">
                                         <h4>Cantidad</h4>
                                         <mat-form-field class="example-full-width">
-                                        <input id="input-largo" matInput type="number" min="0" max="10" [formControl]="quantityControl" required>
-                                        </mat-form-field>                                        
+                                            <input id="input-largo" matInput type="number" min="0" max="10" [formControl]="quantityControl" required #quantityInput>
+                                        </mat-form-field>
                                     </label>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-xs-4">
-                                    <label for="total">                                      
-                                        <h4>Total</h4>  
-                                        <input type="number" min="0" [value]="price$ | async" readonly>                                      
+                                    <label for="total">
+                                        <h4>Total</h4>
+                                        <input value="{{createFritadaPedido.precioplatillo}}" name="createFritadaPedido.precioplatillo" type="number" min="6" [value]="price$ | async" readonly>
                                     </label>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-xs-4">
-                                    <button class="btn btn-success" style="width: 100px;" type="submmit">Pagar</button>
+                                    <button (click)="createFritada()" class="btn btn-success" style="width: 100px;" type="submmit" href="/home/tickets" >Pagar</button>
                                     <br>
                                     <br>
-                                    <a href="/home/restaurante" class="btn btn-danger" style="width: 100px;">Cancelar</a>
-                                </div>
+                                    
+                                    <a href="/home/restaurante" class="btn btn-danger"
+                                        style="width: 100px;">Cancelar</a>
+                                </div>                                
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>        
     </div>
     <br>
 </div>
-
-
+    
