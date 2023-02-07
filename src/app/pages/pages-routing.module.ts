@@ -14,7 +14,7 @@ import{RegistrecompraComponent}from'./registrocompa/registrocompra.component';
 import { formularioComponent } from './formulario/formulario.component';
 import{ComprahamburgesaComponent}from './comprahamburgesa/comprahamburgesa.component';
 import{ComprapolloComponent}from './comprapollo/comprapollo.component';
-import { parilladacompletaComponent } from './parilladacompleta/parilladacompleta.component';
+import { parilladacompletaComponent } from './compraparilladacompleta/parilladacompleta.component';
 import{ComprafritadaComponent}from './comparfritada/comprafritada.component';
 const routes:Routes = [
   {path:'home', 

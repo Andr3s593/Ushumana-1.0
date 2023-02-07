@@ -4,13 +4,13 @@ import { Subject, Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-parilladacompleta',
-  templateUrl: './parilladacompleta.component.html',
-  styleUrls: ['./parilladacompleta.component.css']
+  selector: 'app-compraparilladacompleta',
+  templateUrl: './compraparilladacompleta.component.html',
+  styleUrls: ['./compraparilladacompleta.component.css']
 })
-export class parilladacompletaComponent {   
+export class CompraparilladacompletaComponent {   
   quantityControl = new FormControl(0);
-  private itemPrice = 11.99;
+  private itemPrice = 7.99;
 
   private quantitySubject = new Subject<number>();
   quantity$ = this.quantitySubject.asObservable();
