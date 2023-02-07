@@ -13,11 +13,6 @@ import Swal from 'sweetalert2';
   templateUrl: './compraparilladacompleta.component.html',
   styleUrls: ['./compraparilladacompleta.component.css']
 })
-<<<<<<< HEAD:src/app/pages/compraparilladacompleta/compraparillada.component.ts
-export class CompraparilladacompletaComponent {   
-  quantityControl = new FormControl(0);
-  private itemPrice = 7.99;
-=======
 
 export class CompraparilladacompletaComponent {
   createParilladacompletaPedido: CreateHistorialCompraDto = { imagen: "", nombreplatillo: "", cantidad: 0, precioplatillo: 0 };
@@ -28,8 +23,6 @@ export class CompraparilladacompletaComponent {
 
   quantityControl = new FormControl(0);
   private itemPrice = 6;
->>>>>>> 1b2a80cf0b80d3f2db7557efe08607ba6e26f3c0:src/app/pages/parilladacompleta/parilladacompleta.component.ts
-
   private quantitySubject = new Subject<number>();
   quantity$ = this.quantitySubject.asObservable();
 
