@@ -17,7 +17,6 @@ import { CompraempanadasComponent } from './compraempanadas/compraempanadas.comp
 import{ComprahamburgesaComponent}from './comprahamburgesa/comprahamburgesa.component';
 import{ComprapolloComponent}from './comprapollo/comprapollo.component'
 import { ComprafritadaComponent } from './comparfritada/comprafritada.component';
-import { CompraparilladacompletaComponent } from './compraparilladacompleta/compraparillada.component';
 
 @NgModule({
   
@@ -33,9 +32,8 @@ import { CompraparilladacompletaComponent } from './compraparilladacompleta/comp
     CompraempanadasComponent,
     RegistrecompraComponent,
     ComprahamburgesaComponent,
-    ComprapolloComponent,
-    ComprafritadaComponent,    
-    CompraparilladacompletaComponent,
+    ComprapolloComponent,    
+    ComprafritadaComponent    
   ],
   exports:[
     HomeComponent,
@@ -49,9 +47,8 @@ import { CompraparilladacompletaComponent } from './compraparilladacompleta/comp
     CompraempanadasComponent,
     RegistrecompraComponent,    
     ComprahamburgesaComponent,
-    ComprapolloComponent,
-    ComprafritadaComponent,
-    PagesModule,
+    ComprapolloComponent,    
+    ComprafritadaComponent
   ],
   imports: [
     CommonModule,
