@@ -6,7 +6,6 @@ import { Subject, Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { CreateHistorialCompraDto } from 'src/app/models/historialcompra.model';
 import { HistorialCompraService } from 'src/app/services/historial-compra.service';
-import Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-comprayaguarlocro',
@@ -14,7 +13,7 @@ import Swal  from 'sweetalert2';
   styleUrls: ['./comprayaguarlocro.component.css']
 })
 export class ComprayaguarlocroComponent {
-  createyaguarlocroPedido: CreateHistorialCompraDto = { imagen: "", nombreplatillo: "", cantidad: 0, precioplatillo: 0 };
+  createYaguarlocroPedido: CreateHistorialCompraDto = { imagen: "", nombreplatillo: "", cantidad: 0, precioplatillo: 0 };
   constructor(private yaguarlocroHttpService: HistorialCompraService, private router: Router, private elementRef: ElementRef) {
     this.quantityInput = this.elementRef.nativeElement.querySelector('#input-largo');
   }
@@ -50,20 +49,14 @@ export class ComprayaguarlocroComponent {
       const total = quantity * price;
       const data = {
         imagen: "https://th.bing.com/th/id/R.7b5ec3ed8dc20fbe008559f558d58e8d?rik=V8jcYQno4wNYSA&riu=http%3a%2f%2f2.bp.blogspot.com%2f-diOm0AIe1pY%2fVYtrcIqOnKI%2fAAAAAAAAAB4%2fyRG5hYyeER0%2fs1600%2fyaguarlocro.jpg&ehk=vL%2fIKfJ11DsV1DqQpQjXbGYYginzA21ugx%2fOIRpci%2bE%3d&risl=&pid=ImgRaw&r=0",
-        nombreplatillo: "Yaguarlocro",
+        nombreplatillo: "Yaguarlocro Artesanal",
         cantidad: quantity,
         precioplatillo: total,
       }
       this.yaguarlocroHttpService.create(data).pipe().subscribe(response => {
-        console.log(response);      
-        Swal.fire({
-          icon: 'success',
-          title: 'Usuario Registrado',
-          text: 'Usuario creado exitosamente',        
-        })      
+        console.log(response);              
         this.router.navigate(['/login']);        
       });
     });
   } 
-
 }
