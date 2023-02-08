@@ -11,33 +11,35 @@
                             <p><strong>Nota:</strong> Para evitar errores en nuestro sistema puede ordenar un maximo de 10
                                 platos</p>
                           </div>
-                        <h4 class="card-title text-center">Precio: 7,99</h4>
-                    <div class="container">
-                        <form action="">
-                            <div class="row text-center">
-                                <div class="col-lg-4 col-md-4 col-xs-4">
-                                    <label for="cantidad">
-                                        <h4>Cantidad</h4>
-                                        <mat-form-field class="example-full-width">
-                                        <input id="input-largo" matInput type="number" min="0" max="10" [formControl]="quantityControl" required>
-                                        </mat-form-field>                                        
-                                    </label>
+
+                          <div class="container">
+                            <form action="">
+                                <div class="row text-center">
+                                    <div class="col-lg-4 col-md-4 col-xs-4">
+                                        <label for="cantidad">
+                                            <h4>Cantidad</h4>
+                                            <mat-form-field class="example-full-width">
+                                                <input id="input-largo" matInput type="number" min="0" max="10" [formControl]="quantityControl" required #quantityInput>
+                                            </mat-form-field>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-xs-4">
+                                        <label for="total">
+                                            <h4>Total</h4>
+                                            <input value="{{createPolloPedido.precioplatillo}}" name="createPolloPedido.precioplatillo" type="number" min="6" [value]="price$ | async" readonly>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-xs-4">
+                                        <button (click)="createPollo()" class="btn btn-success" style="width: 100px;" type="submmit">Pagar</button>
+                                        <br>
+                                        <br>
+                                        
+                                        <a href="/home/restaurante" class="btn btn-danger"
+                                            style="width: 100px;">Cancelar</a>
+                                    </div>                                
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-xs-4">
-                                    <label for="total">                                      
-                                        <h4>Total</h4>  
-                                        <input type="number" min="6" [value]="price$ | async" readonly>                                      
-                                    </label>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-xs-4">
-                                    <button class="btn btn-success" style="width: 100px;" type="submmit">Pagar</button>
-                                    <br>
-                                    <br>
-                                    <a href="/home/restaurante" class="btn btn-danger" style="width: 100px;">Cancelar</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                            </form>
+                        </div>
                 </div>
             </div>
         </div>
