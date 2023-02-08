@@ -18,8 +18,7 @@
                                     <label for="cantidad">
                                         <h4>Cantidad</h4>
                                         <mat-form-field class="example-full-width">
-                                            <input id="input-largo" matInput type="number" min="0" max="10"
-                                                [formControl]="empanadas" required>
+                                            <input id="input-largo" matInput type="number" min="0" max="10" [formControl]="quantityControl" required #quantityInput>
                                         </mat-form-field>
                                     </label>
                                 </div>
@@ -30,7 +29,8 @@
                                     </label>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-xs-4">
-                                    <button class="btn btn-success" style="width: 100px;" type="submmit">Pagar</button>
+                                    <button (click)="createEmpanadas()" class="btn btn-success" style="width: 100px;"
+                                    type="submmit">Pagar</button>
                                     <br>
                                     <br>
                                     <a href="/home/restaurante" class="btn btn-danger"
