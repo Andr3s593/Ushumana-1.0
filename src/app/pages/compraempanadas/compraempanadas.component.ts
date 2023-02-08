@@ -23,8 +23,6 @@ export class CompraempanadasComponent {
   private itemPrice = 6;
 
   private quantitySubject = new Subject<number>();
-  quantity$ = this.quantitySubject.asObservable();
-
   price$: Observable<number> = this.quantity$.pipe(
     map(quantity => this.itemPrice * quantity),
     startWith(this.itemPrice),
