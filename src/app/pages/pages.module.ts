@@ -11,13 +11,17 @@ import { CompraticketComponent } from './compraticket/compraticket.component';
 import { ComprarestauranteComponent } from './comprarestaurante/comprarestaurante.component';
 import{RegistrecompraComponent}from'./registrocompa/registrocompra.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComprayaguarlocroComponent } from './comprayaguarlocro/comprayaguarlocro.component';
 import { CompraempanadasComponent } from './compraempanadas/compraempanadas.component';
 import{ComprahamburgesaComponent}from './comprahamburgesa/comprahamburgesa.component';
 import{ComprapolloComponent}from './comprapollo/comprapollo.component'
 import { ComprafritadaComponent } from './comparfritada/comprafritada.component';
 import { CompraparilladacompletaComponent } from './compraparilladacompleta/compraparilladacompleta.component';
+import { TicketcompraComponent } from './ticketcompra/ticketcompra.component';
+import { ReservacompraComponent } from './reservacompra/reservacompra.component';
+import { HttpClientModule } from '@angular/common/http';
+import { formularioComponent } from './formulario/formulario.component';
 
 @NgModule({
   
@@ -29,13 +33,16 @@ import { CompraparilladacompletaComponent } from './compraparilladacompleta/comp
     ReservasComponent,    
     CompraticketComponent,
     ComprarestauranteComponent,
+    formularioComponent,
     ComprayaguarlocroComponent,
     CompraempanadasComponent,
     RegistrecompraComponent,
     ComprahamburgesaComponent,
     ComprapolloComponent,    
     ComprafritadaComponent, 
-    CompraparilladacompletaComponent
+    CompraparilladacompletaComponent, 
+    TicketcompraComponent, 
+    ReservacompraComponent   
   ],
   exports:[
     HomeComponent,
@@ -43,13 +50,15 @@ import { CompraparilladacompletaComponent } from './compraparilladacompleta/comp
     RestaurantComponent,
     TicketComponent,
     ReservasComponent,    
+    formularioComponent,
     CompraticketComponent,
     ComprarestauranteComponent,
     ComprayaguarlocroComponent,
     CompraempanadasComponent,
     RegistrecompraComponent,    
     ComprahamburgesaComponent,
-    ComprapolloComponent,    
+    ComprapolloComponent,   
+    TicketcompraComponent,  
     ComprafritadaComponent
   ],
   imports: [
@@ -57,7 +66,9 @@ import { CompraparilladacompletaComponent } from './compraparilladacompleta/comp
     RouterModule,
     StaticModule,    
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class PagesModule { }

@@ -16,6 +16,8 @@ import{ComprahamburgesaComponent}from './comprahamburgesa/comprahamburgesa.compo
 import{ComprapolloComponent}from './comprapollo/comprapollo.component';
 import{ComprafritadaComponent}from './comparfritada/comprafritada.component';
 import { CompraparilladacompletaComponent } from './compraparilladacompleta/compraparilladacompleta.component';
+import { ReservacompraComponent } from './reservacompra/reservacompra.component';
+import { TicketcompraComponent } from './ticketcompra/ticketcompra.component';
 const routes:Routes = [
   {path:'home', 
   component:HomeComponent,
@@ -34,6 +36,8 @@ const routes:Routes = [
     {path:'comprayahuarlocro',component :ComprayaguarlocroComponent},
     {path:'compraempanadas',component :CompraempanadasComponent},
     {path:'compraparillada',component :CompraparilladacompletaComponent},
+    {path:'registroticket',component :TicketcompraComponent},
+    {path:'registroreserva',component :ReservacompraComponent}            
     
   ]}
 ]

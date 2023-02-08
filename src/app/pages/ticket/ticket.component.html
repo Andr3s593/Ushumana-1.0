@@ -1,5 +1,38 @@
+
+<!--
+<div id="form-style" class="container text-center">      
+    <h1>Adquiere tus Tickets</h1>
+    <form>                
+        <div class="row">
+          <div class="col-lg-3">
+            <label for="numeroadultos"><h6>Numero de Adultos</h6></label>
+            <input id="numeroadultos" class="ms-3" type="number" min="0" max="10" matInput [formControl]="quantityControl" required #quantityInput1>
+          </div>
+          <div class="col-lg-3">
+            <label for="numeroninos"><h6>Numero de Niños</h6></label>
+            <input id="numeroninos" class="ms-3" type="number" min="0" max="10" matInput [formControl]="quantityControl" required #quantityInput2>
+          </div>
+          <div class="col-lg-3">
+            <label for="numeroterceraedad"><h6>Numero Tercera Edad</h6></label>
+            <input id="numeroterceraedad" class="ms-3" type="number" min="0" max="10" matInput [formControl]="quantityControl" required #quantityInput3>
+          </div>
+          <div class="col-lg-3">
+            <label for="numerdiscapacitados"><h6>Numero Discapacitados</h6></label>
+            <input id="numerdiscapacitados" class="ms-3" type="number" min="0" max="10" matInput [formControl]="quantityControl" required #quantityInput4>
+          </div>
+        </div>              
+        <br>
+        <label for="precio"><h6>Total Entradas</h6></label>
+        <input id="precio" class="ms-3" type="number" [value]="price$ | async" readonly>
+        <br>
+        <br>
+        <button style="color: white;" class="btn btn-success">Agregar</button>
+      </form>          
+            <br>
+</div>
+-->
 <header id="header">
-    <h1>Compra Tus Entradas</h1> 
+    <h1>Compra Tus Entradas en Nuestras Instalaciones</h1> 
     <img class="boleto" src="../../../assets/boletos/boleto.png" alt="boleto">
   </header>
   <div id="contenedor" class="contenedor">
@@ -9,7 +42,7 @@
             <p>Paquete Personal</p>
             <p>Entrada para un adulto.</p>
             <p class="precio">$8<span>.00</span></p>
-            <a href="home/reservas">Comprar</a>            
+                        
         </div>
     </div>
     <div>
@@ -18,7 +51,7 @@
             <p>Paquete Pareja</p>   
             <p>Entrada para 2 adultos.</p>                
             <p class="precio">$15<span>.99</span></p>
-            <a href="home/reservas">Comprar</a>
+            
         </div>
     </div>
     <div>
@@ -27,7 +60,7 @@
             <p>Paquete Familiar</p> 
             <p>Entrada para 2 adultos y 2 niños.</p>                  
             <p class="precio">$23<span>.99</span></p>
-            <a href="home/reservas">Comprar</a>
+            
         </div>
     </div>
     <header id="header">
@@ -41,7 +74,7 @@
             <p>Incluye: entrada para 2 adultos y 2 niños,</p>
             <p>2 parrilladas completas y una fritada.</p>                  
             <p class="precio">$42<span>.99</span></p>
-            <a href="home/reservas">Comprar</a>
+            
         </div>
     </div>
     <div>
@@ -50,7 +83,7 @@
             <p>Paquete Standar</p>
             <p>Incluye entrada 2 adultos y 2 yaguarlocros.</p>                   
             <p class="precio">$25<span>.99</span></p>
-            <a href="home/reservas">Comprar</a>
+            
         </div>
     </div>
     <div>
@@ -59,8 +92,7 @@
             <p>Paquete Institusiones</p>    
             <p>Ofrecemos descuentos para instituciones.</p>
             <p>Incluye entrada infantil y hamburgesa.</p>               
-            <p class="precio">$8<span>.50 por niño</span></p>
-            <a href="home/reservas">Comprar</a>
+            <p class="precio">$8<span>.50 por niño</span></p>            
         </div>
     </div>
   </div>

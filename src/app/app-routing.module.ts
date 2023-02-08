@@ -5,10 +5,12 @@ import { AuthRoutingModule } from './auth/auth-routing.module';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginUshumanaComponent } from './login-ushumana/login-ushumana.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'/login', pathMatch:'full'},
-  {path:'**', component:NotFoundComponent}
+  {path:'**', component:NotFoundComponent},
+  {path:'loginushumana', component:LoginUshumanaComponent}
 ];
 
 @NgModule({

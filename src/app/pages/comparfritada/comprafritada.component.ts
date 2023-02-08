@@ -20,7 +20,7 @@ export class ComprafritadaComponent {
 
 
   quantityControl = new FormControl(0);
-  private itemPrice = 6;
+  private itemPrice = 7.99;
 
   private quantitySubject = new Subject<number>();
   quantity$ = this.quantitySubject.asObservable();
@@ -48,7 +48,7 @@ export class ComprafritadaComponent {
     this.price$.subscribe(price => {
       const total = quantity * price;
       const data = {
-        imagen: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tqma.com.ec%2Frecetas%2Frecipe%2F3431-fritada.html&psig=AOvVaw0G0pwbqsuidje9eNPrieGB&ust=1675867683085000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKDfz-LTg_0CFQAAAAAdAAAAABAD",
+        imagen: "https://www.tqma.com.ec/images/com_yoorecipe/banner_superior/12125_1.jpg",
         nombreplatillo: "Fritada",
         cantidad: quantity,
         precioplatillo: total,

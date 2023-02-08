@@ -1,0 +1,40 @@
+
+<br>
+<h1 class="text-center">Carrito Reservas</h1>
+<br>
+<div class="container table-responsive">
+<br>
+<table class="table table-warning text-center">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Numero Adultos</th>
+      <th scope="col">Numero Niños</th>
+      <th scope="col">Fecha de Reserva</th>
+      <th scope="col">Mascotas</th>
+      <th scope="col"> Descripcion</th>
+      <th scope="col">Espera</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let reserva of historialReserva">
+      <td>
+        <img src="{{reserva.imagen}}" style="width: 75px;height: 80px;">
+        </td>
+      <td>{{reserva.nombres}}</td>         
+      <td>{{reserva.apellidos}}</td>
+      <td>{{reserva.numeroadultos}}</td>
+      <td>{{reserva.numeroninos}}</td>          
+      <td>{{reserva.fechadereserva}}</td>      
+      <td>{{reserva.mascotas}}</td>
+      <td>{{reserva.descripcion}}</td>      
+      <td>
+        En Revision
+      </td>    
+  </tbody>
+</table>
+<br>
+<div class="espacio"></div>
+</div>

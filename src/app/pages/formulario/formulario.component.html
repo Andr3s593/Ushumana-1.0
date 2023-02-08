@@ -8,17 +8,16 @@
   
         <div class="mb-3">
             <label for="nombre" class="form-label">Nombres</label>
-            <input type="text" name="nombres" id="nombre" class="form-control" placeholder="" required>
+            <input [(ngModel)]="createTarjeta.nombres" value="{{createTarjeta.nombres}}" name="nombres" type="text" class="form-control" placeholder="" required>
         </div>
         <div class="mb-3">
             <label for="apellido" class="form-label">Apellidos</label>
-            <input type="text" name="apellidos" id="apellido" class="form-control" placeholder="" required>
+            <input [(ngModel)]="createTarjeta.apellidos" value="{{createTarjeta.apellidos}}" name="apellidos" type="text" class="form-control" placeholder="" required>
         </div>
-
         <div class="row">
             <div class=" col">
                 <label for="email" class="form-label">Correo Electronico</label>
-                <input type="email" class="form-control"  name="email" id="email"  placeholder="bpm@gmail.com" required>
+                <input [(ngModel)]="createTarjeta.email" value="{{createTarjeta.email}}" name="email" type="email" class="form-control"  placeholder="bpm@gmail.com" required>
                 <div class="invalid-feedback">
                     Ingresa una direccion de correo electronico valida
                 </div>
@@ -41,16 +40,16 @@
 
             <div class="col">
                 <label for="NumeroTarjeta" class="form-label">Numero De Tarjeta</label>
-                <input type="NumeroTarjeta" class="form-control"  name="NumeroTarjeta" id="NumeroTarjeta"  placeholder="23242730" required>                
+                <input [(ngModel)]="createTarjeta.numerotarjeta" value="{{createTarjeta.numerotarjeta}}" name="numerotarjeta" class="form-control" type="NumeroTarjeta" placeholder="23242730" required>                
             </div>
             <div class="col">
             <label for="FechaCaducidad" class="form-label">Fecha de Caducidad</label>
-            <input type="date" name="fechaCducidad" class="form-control" id="fechaCaducidad" placeholder="dd/mm/aaaa">
+            <input [(ngModel)]="createTarjeta.fechacaducidad" value="{{createTarjeta.fechacaducidad}}" name="fechacaducidad" class="form-control" type="date" placeholder="dd/mm/aaaa">
         </div>
         </div>
     
-            <button class="btn mt-3" type="submit">Cancelar</button>            
-            <button class="btn mt-3 ms-1" type="submit">Validar Pago</button>       
+            <button class="btn mt-3"  type="submit">Cancelar</button>            
+            <button class="btn mt-3 ms-1" (click)="createTarjeta1()" type="submit">Validar Pago</button>       
     </form>
     </div>
 </body>

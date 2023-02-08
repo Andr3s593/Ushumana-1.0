@@ -1,9 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: rgb(187, 109, 36);
-    
+*{
+    color:  rgb(187, 109, 36);
+}
+#form-style{
+    background: #11294d;
+    color:  rgb(187, 109, 36);
+    border-radius: 25px;
 }
 body {
     font-family: 'Space Grotesk', sans-serif;
