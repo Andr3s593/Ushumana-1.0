@@ -13,7 +13,7 @@ import Swal  from 'sweetalert2';
   templateUrl: './comprayaguarlocro.component.html',
   styleUrls: ['./comprayaguarlocro.component.css']
 })
-export class ComprayaguarlocroComponent {
+export class CompraYaguarlocroComponent {
   createyaguarlocroPedido: CreateHistorialCompraDto = { imagen: "", nombreplatillo: "", cantidad: 0, precioplatillo: 0 };
   constructor(private yaguarlocroHttpService: HistorialCompraService, private router: Router, private elementRef: ElementRef) {
     this.quantityInput = this.elementRef.nativeElement.querySelector('#input-largo');
